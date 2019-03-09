@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
-
+import { Text, StyleSheet, View,ImageBackground } from 'react-native'
+import ImageBack from '../../assets/wallpaper.jpg'
 export default class Login extends Component {
     constructor(props){
         super(props);
@@ -9,7 +9,9 @@ export default class Login extends Component {
   render() {
     return (
       <View>
-        <Text> textInComponent </Text>
+        <ImageBackground source={ImageBack} style={{width:'100%',height:"100%"}}>
+            
+        </ImageBackground>
       </View>
     )
   }
