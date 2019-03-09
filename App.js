@@ -16,6 +16,9 @@ import Shop from './src/pages/shop/Shop';
 import MyOrder from './src/pages/myOrder/MyOrder';
 import MyWishList from './src/pages/MyWishList/MyWishList';
 import MyCart from './src/pages/MyCart/MyCart';
+import Sighup from './src/pages/Login/Signup';
+import Forget from './src/pages/Login/Forget';
+import Address from './src/pages/MyCart/Address';
 import Logo from './src/assets/apptromLogo.png';
 import home from './src/assets/home.png';
 import female from './src/assets/female.png';
@@ -63,6 +66,44 @@ const AppStackNavigater=createStackNavigator({
     },
 });
 
+const LoginStackNavigater=createStackNavigator({
+    Login1:{
+        screen:Login,
+        navigationOptions:{
+            header:null
+        }
+    },
+    SignUp:{
+        screen:Sighup,
+        navigationOptions:{
+            header:null
+        }
+    },
+    Forget:{
+        screen:Forget,
+        navigationOptions:{
+            header:null
+        }
+    },
+});
+const MyCartStackNavigater=createStackNavigator({
+    MyCart:{
+        screen:MyCart,
+        navigationOptions:{
+            header:null
+        }
+    },
+    Address1:{
+        screen:Address,
+        navigationOptions:{
+            header:null
+        }
+    },
+});
+
+
+
+
 const AppDrowerNavigation = createDrawerNavigator({
   Home:{screen:AppStackNavigater,
       navigationOptions:{
@@ -71,14 +112,14 @@ const AppDrowerNavigation = createDrawerNavigator({
           <Image  source={home}  resizeMode='contain' style={{ width: 25, height: 25, tintColor: tintColor }}  />
       )
       }},
-  Login:{screen:Login,
+  Login:{screen:LoginStackNavigater,
       navigationOptions:{
           drawerLabel:"Login",
           drawerIcon:({tintColor})=>(
               <Image  source={user}  resizeMode='contain' style={{ width: 25, height: 25, tintColor: tintColor }}  />
           )
       }},
-  MyCart:{screen:MyCart,
+  MyCart:{screen:MyCartStackNavigater,
       navigationOptions:{
           drawerLabel:"My Cart",
           drawerIcon:({tintColor})=>(
