@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     bottom:{
         alignItems:"center",
         height: 40,
-        backgroundColor:'gray',
+        backgroundColor:'#B0B0B0',
 
     },
     text:{
